@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class PatientPrototpe : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    string emergencyType;
 
-    // Update is called once per frame
-    void Update()
+    int severity;
+
+    float arrivalTime;
+
+    void clone()
     {
-        
+
     }
 }

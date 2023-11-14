@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class NurseDecorator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    int nursePerformance;
+
+    void nurseDecorate()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void allocateUrgencyOrder()
     {
         
+    }
+
+    void trackNursePerformance()
+    {
+
+    }
+
+    void trackUpgrades()
+    {
+
     }
 }

@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class MediManageFacade : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void handleMenuActions()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    void handleNurseActions()
     {
-        
+
+    }
+
+    void trackGameState()
+    {
+
+    }
+
+    void trackHospitalStatus()
+    {
+
     }
 }

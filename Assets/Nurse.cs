@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Nurse : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    int diagnosisSkill;
+
+    void urgencyTimer()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void SendToDoctor()
     {
         
     }

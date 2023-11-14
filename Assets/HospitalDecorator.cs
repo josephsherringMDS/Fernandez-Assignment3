@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class HospitalDecorator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void hospitalDecorator()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void trackUpgrades()
     {
         
     }

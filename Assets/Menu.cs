@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void displayMenu()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void handleInput()
     {
-        
+
+    }
+
+    void displayInstructions()
+    {
+
     }
 }

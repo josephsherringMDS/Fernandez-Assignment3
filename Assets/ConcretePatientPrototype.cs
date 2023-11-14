@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class ConcretePatientPrototype : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void urgencyTimer()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void storeSymptoms()
     {
         
+    }
+
+    void storeAilments()
+    {
+
+    }
+
+    void clone()
+    {
+
     }
 }

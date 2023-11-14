@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class Doctor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    string specialty;
 
-    // Update is called once per frame
-    void Update()
+    int treatmentEffectiveness;
+
+    void treatAilment()
     {
         
     }

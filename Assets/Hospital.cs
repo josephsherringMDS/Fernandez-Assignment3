@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Hospital : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    int numDoctors;
+
+    int maxPatients;
+
+    float currency;
+
+    int averagePatientSatisfaction;
+
+    void trackCurrency()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void trackDeaths()
     {
-        
+
+    }
+
+    void trackWaitingRoom()
+    {
+
     }
 }
