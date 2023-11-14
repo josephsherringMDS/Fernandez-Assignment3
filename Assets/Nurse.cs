@@ -7,6 +7,6 @@ public class Nurse : MonoBehaviour
 
     public void nurseDecorate()
     {
-        Debug.Log("Basic nurse decoration.");
+        UnityEngine.Debug.Log("Basic nurse decoration.");
     }
 }

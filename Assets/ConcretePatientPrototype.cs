@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using Random = UnityEngine.Random; // Import Unity's Random class to avoid conflicts
 
 public class ConcretePatientPrototype : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class ConcretePatientPrototype : MonoBehaviour
     }
 
     // The list of possible fictional ailments with symptoms
-    List<FictionalAilment> ailments = new List<FictionalAilment>
+     public List<FictionalAilment> ailments = new List<FictionalAilment>
     {
         new FictionalAilment
         {
@@ -28,7 +29,7 @@ public class ConcretePatientPrototype : MonoBehaviour
         },
         new FictionalAilment
         {
-            Name = "Temporal Navigation Impairment (TNI)"z
+            Name = "Temporal Navigation Impairment (TNI)",
             Symptoms = new List<string> { "Struggle with time perception", "Difficulty navigating daily routines" }
         },
         new FictionalAilment
@@ -69,13 +70,13 @@ public class ConcretePatientPrototype : MonoBehaviour
     };
 
     // The type of emergency the patient has
-    string emergencyType;
+    public string emergencyType;
 
     // The severity level of the patient's condition
-    int severity;
+    int Severity;  // Corrected the variable name
 
     // The time when the patient arrived
-    float arrivalTime;
+    public float arrivalTime;
 
     // Function to create a clone of the patient prototype with a random fictional ailment and symptoms
     public ConcretePatientPrototype Clone()
@@ -84,12 +85,12 @@ public class ConcretePatientPrototype : MonoBehaviour
         FictionalAilment randomAilment = ailments[Random.Range(0, ailments.Count)];
 
         // Log the selected ailment and symptoms
-        Debug.Log($"Cloning patient prototype with fictional ailment: {randomAilment.Name}, Symptoms: {string.Join(", ", randomAilment.Symptoms)}");
+        UnityEngine.Debug.Log($"Cloning patient prototype with fictional ailment: {randomAilment.Name}, Symptoms: {string.Join(", ", randomAilment.Symptoms)}");
 
-        // Create a new instance of PatientPrototype and copy the values
-        PatientPrototype clone = new PatientPrototype();
+        // Create a new instance of ConcretePatientPrototype and copy the values
+        ConcretePatientPrototype clone = new ConcretePatientPrototype();
         clone.emergencyType = randomAilment.Name;
-        clone.severity = this.severity;
+        clone.Severity = this.Severity;  // Corrected the variable name
         clone.arrivalTime = this.arrivalTime;
 
         return clone;

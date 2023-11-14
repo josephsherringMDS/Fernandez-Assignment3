@@ -15,6 +15,6 @@ public class Doctor : MonoBehaviour
     public void treatAilment(PatientPrototype patient)
     {
         string patientAilment = patient.emergencyType;
-        Debug.Log($"Treating ailment: {patientAilment}.");
+        UnityEngine.Debug.Log($"Treating ailment: {patientAilment}.");
     }
 }

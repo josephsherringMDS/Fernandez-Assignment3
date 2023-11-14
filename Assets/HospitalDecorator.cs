@@ -23,7 +23,7 @@ public abstract class HospitalDecorator : MonoBehaviour
     // Function to track upgrades in the hospital
     public virtual void trackUpgrades()
     {
-        Debug.Log("Tracking upgrades in the hospital.");
+        UnityEngine.Debug.Log("Tracking upgrades in the hospital.");
     }
 }
 
@@ -34,6 +34,6 @@ public class ConcreteHospitalDecorator : HospitalDecorator
     {
         base.hospitalDecorator();
 
-        Debug.Log("Enhanced hospital decoration.");
+        UnityEngine.Debug.Log("Enhanced hospital decoration.");
     }
 }

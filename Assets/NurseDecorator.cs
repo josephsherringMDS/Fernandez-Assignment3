@@ -23,27 +23,27 @@ public abstract class NurseDecorator : MonoBehaviour
     // Function to allocate urgency order
     public virtual void allocateUrgencyOrder()
     {
-        Debug.Log("Allocating urgency order.");
+        UnityEngine.Debug.Log("Allocating urgency order.");
     }
 
     // Function to track nurse performance
     public virtual void trackNursePerformance()
     {
-        Debug.Log("Tracking nurse performance.");
+        UnityEngine.Debug.Log("Tracking nurse performance.");
     }
 
     // Function to track upgrades
     public virtual void trackUpgrades()
     {
-        Debug.Log("Tracking upgrades.");
+        UnityEngine.Debug.Log("Tracking upgrades.");
     }
 }
 
 public class ConcreteNurseDecorator : NurseDecorator
-
+{
     public override void allocateUrgencyOrder()
     {
         base.allocateUrgencyOrder();
-        Debug.Log("Enhanced urgency order allocation.");
+    UnityEngine.Debug.Log("Enhanced urgency order allocation.");
     }
 }

@@ -8,6 +8,6 @@ public class Hospital : MonoBehaviour
     // Function to decorate the hospital
     public virtual void hospitalDecorator()
     {
-        Debug.Log("Basic hospital decoration.");
+        UnityEngine.Debug.Log("Basic hospital decoration.");
     }
 }
