@@ -8,11 +8,11 @@ public class Nurse : MonoBehaviour
 
     void urgencyTimer()
     {
-        
+
     }
 
     void SendToDoctor()
     {
-        
+
     }
 }
