@@ -1,29 +1,12 @@
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Hospital : MonoBehaviour
+namespace Assembly_CSharp
 {
-    int numDoctors;
-
-    int maxPatients;
-
-    float currency;
-
-    int averagePatientSatisfaction;
-
-    void trackCurrency()
+    internal class Hospital
     {
-        
-    }
-
-    void trackDeaths()
-    {
-
-    }
-
-    void trackWaitingRoom()
-    {
-
     }
 }

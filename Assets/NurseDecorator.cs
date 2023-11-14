@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,12 +8,12 @@ public class NurseDecorator : MonoBehaviour
 
     void nurseDecorate()
     {
-        
+
     }
 
     void allocateUrgencyOrder()
     {
-        
+
     }
 
     void trackNursePerformance()
