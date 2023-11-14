@@ -1,18 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class Nurse : MonoBehaviour
 {
-    int diagnosisSkill;
+    int nursePerformance;
 
-    void urgencyTimer()
+    public void nurseDecorate()
     {
-
-    }
-
-    void SendToDoctor()
-    {
-
+        Debug.Log("Basic nurse decoration.");
     }
 }

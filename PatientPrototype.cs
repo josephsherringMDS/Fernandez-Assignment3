@@ -1,17 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
-public class PatientPrototpe : MonoBehaviour
+public class PatientPrototype : ConcretePatientPrototype
 {
-    string emergencyType;
+    // Randomly select a fictional ailment from the list
+    FictionalAilment randomAilment = ailments[Random.Range(0, ailments.Count)];
 
-    int severity;
+    // Log the selected ailment and symptoms
+    Debug.Log($"Cloning patient prototype with fictional ailment: {randomAilment.Name}, Symptoms: {string.Join(", ", randomAilment.Symptoms)}");
 
-    float arrivalTime;
-
-    void clone()
-    {
-
-    }
+        // Create a new instance of PatientPrototype and copy the values
+        PatientPrototype clone = new PatientPrototype();
+        clone.emergencyType = randomAilment.Name;
+        clone.severity = this.severity;
+        clone.arrivalTime = this.arrivalTime;
 }
