@@ -5,28 +5,40 @@ using UnityEngine;
 
 public class MediManageFacade : MonoBehaviour
 {
-    // Function to handle actions related to the game menu
-    void handleMenuActions()
-    {
-        UnityEngine.Debug.Log("Handling menu actions.");
-    }
+
+    public void handleMenuActions()
+        {
+            UnityEngine.Debug.Log("Handling menu actions.");
+        }
 
     // Function to handle actions related to nurses in the game
-    void handleNurseActions()
-    {
-        UnityEngine.Debug.Log("Handling nurse actions.");
- 
-    }
+    public void handleNurseActions()
+        {
+            UnityEngine.Debug.Log("Handling nurse actions.");
+
+        }
 
     // Function to track the overall game state
-    void trackGameState()
-    {
-        UnityEngine.Debug.Log("Tracking game state.");
-    }
+    public void trackGameState()
+        {
+            UnityEngine.Debug.Log("Tracking game state.");
+        }
 
     // Function to track the status of the hospital in the game
-    void trackHospitalStatus()
+    public void trackHospitalStatus()
+        {
+            UnityEngine.Debug.Log("Tracking hospital status.");
+        }
+
+    void Start()
     {
-        UnityEngine.Debug.Log("Tracking hospital status.");
+        // Instantiate MediManageFacade
+        MediManageFacade mediManageFacade = new GameObject("MediManageFacade").AddComponent<MediManageFacade>();
+
+        // Call methods
+        mediManageFacade.handleMenuActions();
+        mediManageFacade.handleNurseActions();
+        mediManageFacade.trackGameState();
+        mediManageFacade.trackHospitalStatus();
     }
 }
