@@ -6,20 +6,31 @@ using UnityEngine;
 public class Menu : MonoBehaviour
 {
     // Function to display the menu
-    void displayMenu()
+    public void displayMenu()
     {
-        Debug.Log("Displaying the menu.");
+        UnityEngine.Debug.Log("Displaying the menu.");
     }
 
     // Function to handle user input for the menu
-    void handleInput()
+    public void handleInput()
     {
-        Debug.Log("Handling user input for the menu.");
+        UnityEngine.Debug.Log("Handling user input for the menu.");
     }
 
     // Function to display instructions in the menu
-    void displayInstructions()
+    public void displayInstructions()
     {
-        Debug.Log("Displaying instructions in the menu.");
+        UnityEngine.Debug.Log("Displaying instructions in the menu.");
+    }
+
+    public void Start()
+    {
+        // Instantiate Menu
+        Menu menu = new GameObject("Menu").AddComponent<Menu>();
+
+        // Call methods
+        menu.displayMenu();
+        menu.handleInput();
+        menu.displayInstructions();
     }
 }

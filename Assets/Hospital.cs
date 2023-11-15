@@ -1,13 +1,12 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using UnityEngine;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Hospital : MonoBehaviour
+namespace Assembly_CSharp
 {
-    // Function to decorate the hospital
-    public virtual void hospitalDecorator()
+    internal class Hospital
     {
-        UnityEngine.Debug.Log("Basic hospital decoration.");
     }
 }

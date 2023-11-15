@@ -15,6 +15,15 @@ public class Doctor : MonoBehaviour
     public void treatAilment(PatientPrototype patient)
     {
         string patientAilment = patient.emergencyType;
-        Debug.Log($"Treating ailment: {patientAilment}.");
+        UnityEngine.Debug.Log($"Treating ailment: {patientAilment}.");
+    }
+
+    public void Start()
+    {
+        // Instantiate Doctor
+        Doctor doctor = new GameObject("Doctor").AddComponent<Doctor>();
+
+        // Call methods
+        doctor.treatAilment();
     }
 }

@@ -7,11 +7,6 @@ public abstract class NurseDecorator : MonoBehaviour
 {
     protected Nurse nurse; // Reference to the base Nurse component
 
-    public void SetNurse(Nurse baseNurse)
-    {
-        this.nurse = baseNurse;
-    }
-
     public virtual void nurseDecorate()
     {
         if (nurse != null)
@@ -23,27 +18,39 @@ public abstract class NurseDecorator : MonoBehaviour
     // Function to allocate urgency order
     public virtual void allocateUrgencyOrder()
     {
-        Debug.Log("Allocating urgency order.");
+        UnityEngine.Debug.Log("Allocating urgency order.");
     }
 
     // Function to track nurse performance
     public virtual void trackNursePerformance()
     {
-        Debug.Log("Tracking nurse performance.");
+        UnityEngine.Debug.Log("Tracking nurse performance.");
     }
 
     // Function to track upgrades
     public virtual void trackUpgrades()
     {
-        Debug.Log("Tracking upgrades.");
+        UnityEngine.Debug.Log("Tracking upgrades.");
     }
 }
 
 public class ConcreteNurseDecorator : NurseDecorator
 
     public override void allocateUrgencyOrder()
-    {
-        base.allocateUrgencyOrder();
-        Debug.Log("Enhanced urgency order allocation.");
-    }
+{
+    base.allocateUrgencyOrder();
+    UnityEngine.Debug.Log("Enhanced urgency order allocation.");
+}
+
+public void Start()
+{
+    // Instantiate NurseDecorator
+    NurseDecorator nurseDecorator = new GameObject("NurseDecorator").AddComponent<NurseDecorator>();
+
+    // Call methods
+    nurseDecorator.nurseDecorate();
+    nurseDecorator.allocateUrgencyOrder();
+    nurseDecorator.trackNursePerformance();
+    nurseDecorator.trackUpgrades();
+}
 }

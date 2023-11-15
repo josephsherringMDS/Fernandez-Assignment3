@@ -9,4 +9,19 @@ public class Nurse : MonoBehaviour
     {
         UnityEngine.Debug.Log("Basic nurse decoration.");
     }
+
+    public void sendToDoctor()
+    {
+        UnityEngine.Debug.Log("Sending to doctor.");
+    }
+
+    public void Start()
+    {
+        // Instantiate Nurse
+        Nurse nurse = new GameObject("Nurse").AddComponent<Nurse>();
+
+        // Call methods
+        nurse.nurseDecorate();
+        nurse.sendToDoctor();
+    }
 }

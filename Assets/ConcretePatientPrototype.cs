@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random; // Import Unity's Random class to avoid conflicts
 
 public class ConcretePatientPrototype : MonoBehaviour
 {
@@ -15,7 +11,7 @@ public class ConcretePatientPrototype : MonoBehaviour
     }
 
     // The list of possible fictional ailments with symptoms
-     public List<FictionalAilment> ailments = new List<FictionalAilment>
+    List<FictionalAilment> ailments = new List<FictionalAilment>
     {
         new FictionalAilment
         {
@@ -67,22 +63,22 @@ public class ConcretePatientPrototype : MonoBehaviour
             Name = "Prophetic Memory Disorder (PMD)",
             Symptoms = new List<string> { "Belief of experiencing future events", "Seeking medical attention for memory stabilization and cognitive reassurance" }
         },
-    };
+};
 
     // The type of emergency the patient has
-    public string emergencyType;
+    string emergencyType;
 
     // The severity level of the patient's condition
-    int Severity;  // Corrected the variable name
+    int severity;
 
     // The time when the patient arrived
-    public float arrivalTime;
+    float arrivalTime;
 
     // Function to create a clone of the patient prototype with a random fictional ailment and symptoms
     public ConcretePatientPrototype Clone()
     {
         // Randomly select a fictional ailment from the list
-        FictionalAilment randomAilment = ailments[Random.Range(0, ailments.Count)];
+        FictionalAilment randomAilment = ailments[UnityEngine.Random.Range(0, ailments.Count)];
 
         // Log the selected ailment and symptoms
         UnityEngine.Debug.Log($"Cloning patient prototype with fictional ailment: {randomAilment.Name}, Symptoms: {string.Join(", ", randomAilment.Symptoms)}");
@@ -90,9 +86,36 @@ public class ConcretePatientPrototype : MonoBehaviour
         // Create a new instance of ConcretePatientPrototype and copy the values
         ConcretePatientPrototype clone = new ConcretePatientPrototype();
         clone.emergencyType = randomAilment.Name;
-        clone.Severity = this.Severity;  // Corrected the variable name
+        clone.severity = this.severity;
         clone.arrivalTime = this.arrivalTime;
 
         return clone;
+    }
+
+    public void UrgencyTimer()
+    {
+        UnityEngine.Debug.Log("Setting urgency timer.");
+    }
+
+    public void StoreSymptoms()
+    {
+        UnityEngine.Debug.Log("Storing symptoms.");
+    }
+
+    public void StoreAilments()
+    {
+        UnityEngine.Debug.Log("Storing ailments.");
+    }
+
+    void Start()
+    {
+        // Instantiate ConcretePatientPrototype
+        ConcretePatientPrototype concretePatientPrototype = new GameObject("ConcretePatientPrototype").AddComponent<ConcretePatientPrototype>();
+
+        // Call methods
+        concretePatientPrototype.Clone();
+        concretePatientPrototype.UrgencyTimer();
+        concretePatientPrototype.StoreSymptoms();
+        concretePatientPrototype.StoreAilments();
     }
 }
